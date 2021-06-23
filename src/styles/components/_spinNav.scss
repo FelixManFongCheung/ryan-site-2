@@ -1,0 +1,59 @@
+// @mixin rotated-text($num-letters, $angle-span) {
+//   $angle-per-char: $angle-span / $num-letters;
+//   @for $i from 1 through $num-letters {
+//     span#{$i} {
+//       transform: rotate($angle-per-char * 1deg * $i);
+//     }
+//   }
+// }
+@mixin spinning($deg, $anim) {
+  animation: $anim 30s infinite linear;
+
+  @keyframes #{$anim} {
+    0% {
+      transform: rotate($deg);
+    }
+    100% {
+      transform: rotate($deg + 360deg);
+    }
+  }
+}
+
+$num-of-letter: 36;
+$height: 100px;
+$width: 100px;
+
+.spinNav {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .spinner {
+    position: relative;
+    height: $height;
+    width: $width;
+    & Link {
+      text-decoration: none;
+    }
+  }
+
+  .letter {
+    text-align: center;
+    font-size: 10px;
+    height: 50px;
+    position: absolute;
+    width: 8px;
+    top: 50%;
+    left: 50%;
+    // transform: translate(-50%, -20%);
+    transform-origin: bottom center;
+  }
+  @for $i from 1 through $num-of-letter {
+    .letter-animation#{$i} {
+      $deg: 10deg * $i;
+      transform: rotate($deg);
+      @include spinning($deg, animation-#{$i});
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  // grid-gap: 0.5em;
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 100px);
+}
+
+.painting {
+  background-color: rgb(177, 174, 174);
+  padding: 2px;
+  border: 1px solid #ddd;
+  text-align: center;
+  background-size: 100% 100%;
+}
+
+.ghost {
+  opacity: 0;
+}
