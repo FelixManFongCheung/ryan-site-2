@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SpinNav from "./SpinNav";
 
 const Share = ({ onClick }) => {
   return (
@@ -27,7 +28,8 @@ function Home() {
     <div>
       <div className="header">
         <div className="name">Ryan Moyii</div>
-        <div className="menu">Menu</div>
+        {/* <div className="menu">Menu</div> */}
+        <SpinNav />
       </div>
       <div className="footer">
         {shareBar === false ? (

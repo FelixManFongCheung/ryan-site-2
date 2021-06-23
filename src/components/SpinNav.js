@@ -12,154 +12,88 @@ function SpinNav() {
 
   return (
     <div className="spinNav">
-      <div className="spinner">
-        {/* home  */}
-        <Link href="/">
-          <a>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              H
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              O
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              M
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              E
-            </span>
-          </a>
-        </Link>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        {/* about */}
-        <Link href="/">
-          <a>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              A
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              B
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              O
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              U
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              T
-            </span>
-          </a>
-        </Link>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        {/* works */}
-        <Link href="/">
-          <a>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              W
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              O
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              R
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              K
-            </span>
-            <span ref={(ref) => spinItems.current.push(ref)} className="letter">
-              S
-            </span>
-          </a>
-        </Link>
+      {/* home  */}
+      <Link href="/">
+        <a>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            H
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            O
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            M
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            E
+          </span>
+        </a>
+      </Link>
+      <span
+        ref={(ref) => spinItems.current.push(ref)}
+        className="letter"
+      ></span>
+      <span
+        ref={(ref) => spinItems.current.push(ref)}
+        className="letter"
+      ></span>
+      {/* about */}
+      <Link href="/">
+        <a>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            A
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            B
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            O
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            U
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            T
+          </span>
+        </a>
+      </Link>
+      <span
+        ref={(ref) => spinItems.current.push(ref)}
+        className="letter"
+      ></span>
+      <span
+        ref={(ref) => spinItems.current.push(ref)}
+        className="letter"
+      ></span>
+      {/* works */}
+      <Link href="/">
+        <a>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            W
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            O
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            R
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            K
+          </span>
+          <span ref={(ref) => spinItems.current.push(ref)} className="letter">
+            S
+          </span>
+        </a>
+      </Link>
 
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-        <span
-          ref={(ref) => spinItems.current.push(ref)}
-          className="letter"
-        ></span>
-      </div>
+      <span
+        ref={(ref) => spinItems.current.push(ref)}
+        className="letter"
+      ></span>
+      <span
+        ref={(ref) => spinItems.current.push(ref)}
+        className="letter"
+      ></span>
     </div>
   );
 }

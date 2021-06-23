@@ -13,8 +13,8 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Home />
-      <Grids />
-      <SpinNav />
+      {/* <Grids /> */}
+      {/* <SpinNav /> */}
     </div>
   );
 }
