@@ -12,9 +12,19 @@ const Share = ({ onClick }) => {
 const ShareIcon = ({ onClick }) => {
   return (
     <div className="share">
-      <div className="facebook">Facebook</div>
-      <div className="twitter">Twitter</div>
-      <div className="instagram">Instagram</div>
+      <a
+        href="https://www.facebook.com/share.php?u=/"
+        target="_blank"
+        className="facebook"
+      >
+        Facebook
+      </a>
+      <a href="" className="twitter">
+        Twitter
+      </a>
+      <a href="" className="instagram">
+        Instagram
+      </a>
       <div className="cancel trigger" onClick={onClick}>
         Cancel
       </div>
