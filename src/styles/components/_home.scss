@@ -1,0 +1,38 @@
+.header {
+  position: fixed;
+  display: inline;
+  width: 100%;
+  top: 0;
+  padding-top: 10px;
+  z-index: 99999;
+  .name {
+    font-size: 20px;
+    float: left;
+    margin-left: 10px;
+  }
+
+  .menu {
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 2rem;
+  z-index: 99999;
+  .share {
+    font-size: 30px;
+    float: right;
+    margin-right: 10px;
+  }
+}
+
+:root {
+  height: 200vh;
+}
+
+.trigger {
+  cursor: pointer;
+}
