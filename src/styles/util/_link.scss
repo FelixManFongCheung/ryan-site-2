@@ -1,0 +1,9 @@
+@mixin util-link {
+  text-decoration: none;
+  color: black;
+  & :visited,
+  :hover,
+  :active {
+    color: black;
+  }
+}

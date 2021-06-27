@@ -3,39 +3,22 @@
   display: inline;
   width: 100%;
   top: 0;
+  left: 0;
   padding-top: 10px;
   z-index: 99999;
+  margin: auto;
+  //if you want to blur the background of the header
+  // backdrop-filter: blur(2px);
+  .name-link {
+    @include util-link;
+  }
   .name {
     font-size: 20px;
-    float: left;
-    margin-left: 10px;
-  }
-
-  .menu {
-    float: right;
-    margin-right: 10px;
-  }
-}
-
-.footer {
-  position: fixed;
-  width: 100%;
-  bottom: 2rem;
-  right: 10px;
-  z-index: 99999;
-  .share {
-    & a {
-      display: block;
-      text-decoration: none;
-    }
-    font-size: 30px;
-    float: right;
-    margin-right: 10px;
+    padding-left: 10px;
   }
 }
 
 :root {
-  height: 200vh;
   box-sizing: border-box;
 }
 

@@ -1,61 +1,35 @@
 import React, { useState } from "react";
-import SpinNav from "./SpinNav";
-
-const Share = ({ onClick }) => {
-  return (
-    <div className="share trigger" onClick={onClick}>
-      Share
-    </div>
-  );
-};
-
-const ShareIcon = ({ onClick }) => {
-  return (
-    <div className="share">
-      <a
-        href="https://www.facebook.com/share.php?u=/"
-        target="_blank"
-        className="facebook"
-      >
-        Facebook
-      </a>
-      <a href="" className="twitter">
-        Twitter
-      </a>
-      <a href="" className="instagram">
-        Instagram
-      </a>
-      <div className="cancel trigger" onClick={onClick}>
-        Cancel
-      </div>
-    </div>
-  );
-};
+import Content from "./Content";
+import Footer from "./Footer";
+import Header from "./Header";
 
 function Home() {
-  const [shareBar, setShareBar] = useState(false);
+  const [ImageContent, setImageContent] = useState(true);
+  const [WorkContent, setWorkContent] = useState(false);
+  // const changeImageState = () => {
+  //   setImageContent((ImageContent = !ImageContent));
+  // };
+  const changeMode = (mode) => {
+    switch (mode) {
+      case "home":
+        setImageContent(true);
+        setWorkContent(false);
+        break;
+      case "works":
+        setImageContent(false);
+        setWorkContent(true);
+        break;
+      case "about":
+        setImageContent(false);
+        setWorkContent(false);
+        break;
+    }
+  };
   return (
     <div>
-      <div className="header">
-        <div className="name">Ryan Moyii</div>
-        {/* <div className="menu">Menu</div> */}
-        <SpinNav />
-      </div>
-      <div className="footer">
-        {shareBar === false ? (
-          <Share
-            onClick={() => {
-              setShareBar(!shareBar);
-            }}
-          />
-        ) : (
-          <ShareIcon
-            onClick={() => {
-              setShareBar(!shareBar);
-            }}
-          />
-        )}
-      </div>
+      <Header changeMode={changeMode} />
+      <Content ImageContent={ImageContent} WorkContent={WorkContent} />
+      <Footer />
     </div>
   );
 }

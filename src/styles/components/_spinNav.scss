@@ -23,7 +23,11 @@ $num-of-letter: 36;
 $height: 80px;
 $width: 80px;
 
-.spinNav {
+.spin-nav {
+  .spin-link {
+    cursor: pointer;
+    @include util-link;
+  }
   float: right;
   height: $height;
   width: $width;
