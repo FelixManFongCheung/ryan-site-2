@@ -5,10 +5,17 @@
   top: 0;
   left: 0;
   padding-top: 10px;
-  z-index: 99999;
+  z-index: 9999;
   margin: auto;
+  pointer-events: none;
   //if you want to blur the background of the header
   // backdrop-filter: blur(2px);
+  .name-link {
+    pointer-events: auto;
+  }
+  .spin-nav {
+    pointer-events: auto;
+  }
   .name-link {
     @include util-link;
   }

@@ -5,6 +5,7 @@ function Grids() {
   let dragEl, targetEl;
   //infinite scroll efffect ****************************************************
   let artWork = document.querySelector(".grid-container");
+  let a = document.querySelector(".content");
   console.log(artWork);
   // let scrollY = artWork.scrollHeight;
   // let elementY = artWork.clientHeight;
