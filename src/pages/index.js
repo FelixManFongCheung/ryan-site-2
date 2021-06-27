@@ -13,7 +13,7 @@ export default function Index() {
         <meta property="og:title" content="Title Here" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="http://localhost:3000/" />
-        <meta property="og:image" content="/.paintings/mahjong1.jpg" />
+        <meta property="og:image" content="/.paintings" />
         <meta property="og:description" content="Description Here" />
         <meta property="og:site_name" content="Site Name" />
         <meta property="fb:admins" content="Facebook numeric ID" />

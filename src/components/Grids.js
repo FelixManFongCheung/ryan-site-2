@@ -3,9 +3,14 @@ import { data } from "../data/paintingsForGrids";
 
 function Grids() {
   let dragEl, targetEl;
-  // const _onClick = (e) => {
-  //   e.target.src = "https://picsum.photos/200/300";
-  // };
+  //infinite scroll efffect ****************************************************
+  let artWork = document.querySelector(".grid-container");
+  console.log(artWork);
+  // let scrollY = artWork.scrollHeight;
+  // let elementY = artWork.clientHeight;
+  // console.log(scrollY);
+  // console.log(elementY);
+  //infinite scroll efffect ****************************************************
 
   const _onDragStart = (e) => {
     dragEl = e.target;
@@ -35,7 +40,7 @@ function Grids() {
   };
 
   return (
-    <div className="container">
+    <div className="grid-container">
       <div
         className="grid"
         onDragEnd={_onDragEnd}
