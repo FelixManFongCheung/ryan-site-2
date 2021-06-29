@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Content from "./Content";
 import Footer from "./Footer";
 import Header from "./Header";
+import { Parallax } from "react-scroll-parallax";
 
 function Home() {
   const [ImageContent, setImageContent] = useState(true);

@@ -1,17 +1,9 @@
 import Image from "next/image";
 import { data } from "../data/paintingsForGrids";
+import { useEffect } from "react";
 
 function Grids() {
   let dragEl, targetEl;
-  //infinite scroll efffect ****************************************************
-  let artWork = document.querySelector(".grid-container");
-  let a = document.querySelector(".content");
-  console.log(artWork);
-  // let scrollY = artWork.scrollHeight;
-  // let elementY = artWork.clientHeight;
-  // console.log(scrollY);
-  // console.log(elementY);
-  //infinite scroll efffect ****************************************************
 
   const _onDragStart = (e) => {
     dragEl = e.target;

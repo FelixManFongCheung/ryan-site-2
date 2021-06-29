@@ -6,6 +6,7 @@
   z-index: 99999;
   margin: auto;
   text-align: right;
+  pointer-events: none;
   .share {
     & a {
       display: block;
@@ -14,5 +15,6 @@
     font-size: 30px;
     float: right;
     padding-right: 10px;
+    pointer-events: auto;
   }
 }

@@ -10,7 +10,9 @@
   pointer-events: none;
   //if you want to blur the background of the header
   // backdrop-filter: blur(2px);
-  .name-link {
+  .name {
+    // width: 50px;
+    display: inline-block;
     pointer-events: auto;
   }
   .spin-nav {
