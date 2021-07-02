@@ -13,6 +13,8 @@ function HomeContent() {
     let containerWidth = artContainer.getBoundingClientRect().width;
     let artWidth = art.getBoundingClientRect().width;
     let upperDistance = containerWidth - artWidth;
+    let parentNodeImage = document.querySelector(".art-image").parentElement;
+    parentNodeImage.style.pointerEvents = "none";
 
     let pos1 = 0,
       pos2 = 0,
@@ -29,6 +31,7 @@ function HomeContent() {
     }px`;
 
     const mouseDown = (e) => {
+      console.log(e.target);
       e.preventDefault();
       target = e.target;
       pos1 = e.clientX;
@@ -86,15 +89,14 @@ function HomeContent() {
   return (
     <div className="art-container">
       <div className="art">
-        <div className="art-image">
-          <Image
-            key={newData[0].id}
-            src={newData[0].url}
-            alt="title"
-            layout="fill"
-            // objectFit="cover"
-          />
-        </div>
+        <Image
+          className="art-image"
+          key={newData[0].id}
+          src={newData[0].url}
+          alt="title"
+          layout="fill"
+          objectFit="contain"
+        />
       </div>
     </div>
   );

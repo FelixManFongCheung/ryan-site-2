@@ -8,18 +8,10 @@
   .art {
     position: relative;
     height: 100%;
-    background-color: blue;
+    width: 200px;
+    background-color: rgb(189, 189, 192);
   }
   .art-image {
-    position: relative;
-    height: 100%;
-    padding-top: 100%; /* 1:1 Aspect Ratio */
+    pointer-events: none;
   }
-  .art-caption {
-    background-color: green;
-  }
-}
-
-.border-right {
-  border-right: 3px solid;
 }
