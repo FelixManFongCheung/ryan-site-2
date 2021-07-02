@@ -3,7 +3,6 @@ import Image from "next/image";
 import Grids from "../components/Grids";
 import SpinNav from "../components/SpinNav";
 import Home from "../components/Home";
-import { ParallaxProvider } from "react-scroll-parallax";
 
 export default function Index() {
   return (
@@ -20,9 +19,7 @@ export default function Index() {
         <meta property="fb:admins" content="Facebook numeric ID" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ParallaxProvider>
-        <Home />
-      </ParallaxProvider>
+      <Home />
       {/* <Grids /> */}
       {/* <SpinNav /> */}
     </div>
