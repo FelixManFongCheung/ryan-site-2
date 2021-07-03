@@ -1,1 +1,14 @@
-
+.works {
+  display: inline-block;
+  position: relative;
+  width: 70%;
+  //   background-color: red;
+  .artworks {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .artworks-image {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

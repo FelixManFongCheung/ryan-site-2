@@ -5,7 +5,7 @@ import Works from "./Works";
 import About from "./About";
 import Work from "./Works";
 
-function Content({ ImageContent, WorkContent }) {
+function ArtworksLayout({ ImageContent, WorkContent }) {
   // dataSorting function////////////////////////////////////////////////////////////////////////////////////////
   const dataSorting = (data, number) => {
     let newArray = [];
@@ -36,39 +36,40 @@ function Content({ ImageContent, WorkContent }) {
   // let fakeData = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   // console.log(dataSorting(fakeData, 6));
   //testing///////////////////////////////////////////////////////////////////////////////////////////////////
-  let newData = dataSorting(data, 3);
+  let newData = dataSorting(data, 4);
   return (
-    <div className="content">
-      {ImageContent ? (
-        newData.map((datum1, index1) => {
-          return (
-            <div key={datum1.id} className="art" key={datum1.id}>
-              {datum1.map((datum2, index2) => {
-                let random = Math.floor(Math.random() * 300);
-                return (
-                  // the content component can show anything from images to about to works; so this is where is the state can change what to be displayed
+    <div>
+      {newData.map((datum1, index1) => {
+        return (
+          <div key={datum1.id} className="artworks">
+            {datum1.map((datum2, index2) => {
+              let random = Math.floor(Math.random() * 300);
+              return (
+                // the content component can show anything from images to about to works; so this is where is the state can change what to be displayed
+                <div
+                  key={datum2.id}
+                  style={{
+                    margin: "10px",
+                    display: "inline-block",
+                    // flex: "1",
+                  }}
+                >
                   <Image
-                    key={datum2.id}
-                    className="art-image"
+                    className="artworks-image"
                     src={datum2.url}
                     alt="title"
                     width={100}
                     height={100}
                     // layout="fill"
-                    style={{ transform: `translateY(${offsetY * random}px)` }}
                   />
-                );
-              })}
-            </div>
-          );
-        })
-      ) : WorkContent ? (
-        <Works />
-      ) : (
-        <About />
-      )}
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 }
 
-export default Content;
+export default ArtworksLayout;

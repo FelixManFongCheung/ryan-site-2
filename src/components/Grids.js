@@ -6,6 +6,7 @@ function Grids() {
   let dragEl, targetEl;
 
   const _onDragStart = (e) => {
+    console.log("dragging");
     dragEl = e.target;
     setTimeout(() => {
       dragEl.classList.add("ghost");

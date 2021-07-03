@@ -9,7 +9,6 @@ function HomeContent() {
   useEffect(() => {
     let artContainer = document.querySelector(".art-container");
     let art = document.querySelector(".art");
-    let halfwayPoint = artContainer.getBoundingClientRect().width / 2;
     let containerWidth = artContainer.getBoundingClientRect().width;
     let artWidth = art.getBoundingClientRect().width;
     let upperDistance = containerWidth - artWidth;
@@ -21,8 +20,6 @@ function HomeContent() {
       right = false,
       target,
       targetPos = 0,
-      opacity = 1,
-      sum = 0,
       shadeDistance = 100;
 
     art.style.left = `${
@@ -78,12 +75,31 @@ function HomeContent() {
           (target.style.opacity = 1);
       }
     };
+
+    const mouseOver = (e) => {
+      e.preventDefault();
+      art.style.opacity = "1";
+    };
+
+    const mouseLeave = (e) => {
+      e.preventDefault();
+      art.style.opacity = "0.5";
+    };
+
     const mouseUp = (e) => {
       e.preventDefault();
       document.removeEventListener("mousemove", mouseMove);
       document.removeEventListener("mouseup", mouseUp);
     };
-    document.addEventListener("mousedown", mouseDown);
+    artContainer.addEventListener("mousedown", mouseDown);
+    art.addEventListener("mouseover", mouseOver);
+    art.addEventListener("mouseleave", mouseLeave);
+
+    return () => {
+      artContainer.removeEventListener("mousedown", mouseDown);
+      art.removeEventListener("mouseover", mouseOver);
+      art.removeEventListener("mouseleave", mouseLeave);
+    };
   }, []);
 
   return (
@@ -97,6 +113,10 @@ function HomeContent() {
           layout="fill"
           objectFit="contain"
         />
+      </div>
+      {/* google font change to thin joseph */}
+      <div className="description">
+        <h3>{newData[0].name}</h3>
       </div>
     </div>
   );

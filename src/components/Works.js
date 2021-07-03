@@ -1,4 +1,5 @@
 import Grids from "./Grids";
+import ArtworksLayout from "./ArtworksLayout";
 import { useEffect } from "react";
 
 function Work() {
@@ -27,6 +28,7 @@ function Work() {
   // }, []);
   return (
     <div className="works">
+      <ArtworksLayout />
       <Grids />
     </div>
   );
