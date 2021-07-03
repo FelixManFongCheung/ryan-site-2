@@ -4,7 +4,6 @@ import { data } from "../data/allPaintings";
 
 function HomeContent() {
   let newData = data.slice(0, 5);
-  console.log(newData);
 
   useEffect(() => {
     let artContainer = document.querySelector(".art-container");
@@ -41,32 +40,34 @@ function HomeContent() {
       if (target.classList.contains("art")) {
         if (pos1 < e.clientX) {
           right = true;
-          console.log("right");
         } else if (pos1 > e.clientX) {
           right = false;
-          console.log("left");
         }
         pos2 = pos1 - e.clientX;
         pos1 = e.clientX;
         targetPos = target.offsetLeft;
         let nextDistance = target.offsetLeft - pos2;
         if (nextDistance >= 0 && nextDistance <= upperDistance) {
-          console.log("moving");
           target.style.left = nextDistance + "px";
         }
-        const fading = (targetPos, side) => {
-          if (targetPos > 0) {
-            side == "left" && (target.style.opacity = targetPos / 100);
+        const fading = (nextDistance, side) => {
+          if (nextDistance > 0) {
+            console.log(nextDistance);
+            side == "left" && (target.style.opacity = nextDistance / 100);
             side == "right" &&
               (target.style.opacity =
                 1 -
-                (targetPos + artWidth - (containerWidth - shadeDistance)) /
+                (nextDistance + artWidth - (containerWidth - shadeDistance)) /
                   100);
+          }
+          if (nextDistance < 20) {
+            target.remove();
+            document.querySelector(".description").remove();
           }
         };
         nextDistance < shadeDistance &&
           nextDistance >= 0 &&
-          fading(targetPos, "left");
+          fading(nextDistance, "left");
         nextDistance > upperDistance - shadeDistance &&
           nextDistance <= upperDistance &&
           fading(targetPos, "right");
