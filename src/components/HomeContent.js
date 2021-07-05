@@ -27,7 +27,6 @@ function HomeContent() {
     }px`;
 
     const mouseDown = (e) => {
-      console.log(e.target);
       e.preventDefault();
       target = e.target;
       pos1 = e.clientX;
@@ -52,7 +51,6 @@ function HomeContent() {
         }
         const fading = (nextDistance, side) => {
           if (nextDistance > 0) {
-            console.log(nextDistance);
             side == "left" && (target.style.opacity = nextDistance / 100);
             side == "right" &&
               (target.style.opacity =
@@ -60,9 +58,11 @@ function HomeContent() {
                 (nextDistance + artWidth - (containerWidth - shadeDistance)) /
                   100);
           }
-          if (nextDistance < 20) {
-            target.remove();
-            document.querySelector(".description").remove();
+          if (nextDistance < 20 || nextDistance > upperDistance - 20) {
+            target.style.display = "none";
+            document.querySelector(".description").style.display = "none";
+            document.removeEventListener("mouseup", mouseUp);
+            document.removeEventListener("mousemove", mouseMove);
           }
         };
         nextDistance < shadeDistance &&
@@ -70,7 +70,7 @@ function HomeContent() {
           fading(nextDistance, "left");
         nextDistance > upperDistance - shadeDistance &&
           nextDistance <= upperDistance &&
-          fading(targetPos, "right");
+          fading(nextDistance, "right");
         nextDistance >= shadeDistance &&
           nextDistance <= upperDistance - shadeDistance &&
           (target.style.opacity = 1);

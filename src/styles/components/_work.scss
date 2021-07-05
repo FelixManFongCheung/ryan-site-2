@@ -1,14 +1,15 @@
 .works {
   display: inline-block;
   position: relative;
-  width: 70%;
-  //   background-color: red;
+  margin: 0 auto;
+  width: 100%;
+  // background-color: red;
   .artworks {
-    display: flex;
-    justify-content: space-evenly;
+    position: relative;
+    margin: 0 20px;
+    text-align: center;
+    padding: 0;
   }
   .artworks-image {
-    margin-left: 10px;
-    margin-right: 10px;
   }
 }
