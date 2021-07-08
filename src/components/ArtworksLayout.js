@@ -25,7 +25,7 @@ function ArtworksLayout() {
                 alt="title"
                 width={300}
                 height={300}
-                loading="eager"
+                priority={true}
                 // layout="fill"
               />
             </li>
