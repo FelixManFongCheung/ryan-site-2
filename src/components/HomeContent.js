@@ -78,8 +78,7 @@ function HomeContent() {
                         (containerWidth - shadeDistance)) /
                         100);
                 }
-                // if (nextDistance < 20 || nextDistance > upperDistance - 20) {
-                if (nextDistance === 0 || nextDistance === upperDistance) {
+                if (nextDistance < 5 || nextDistance > upperDistance - 5) {
                   target.style.opacity = 0;
                   descriptionArray[index].classList.add("nothing");
                   setSlide(slide + 1);
