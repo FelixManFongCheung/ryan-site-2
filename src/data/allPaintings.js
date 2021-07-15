@@ -22,7 +22,7 @@ export const data = [
   {
     id: 5,
     name: "Can_t Start Anew",
-    url: "/paintings/Can_t Start Anew.JPG",
+    url: "/paintings/Can_t Start Anew.jpg",
   },
   {
     id: 6,
@@ -32,7 +32,7 @@ export const data = [
   {
     id: 7,
     name: "Elegy",
-    url: "/paintings/Elegy.JPG",
+    url: "/paintings/Elegy.jpg",
   },
   {
     id: 8,
