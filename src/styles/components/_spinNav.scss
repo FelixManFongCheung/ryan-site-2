@@ -29,7 +29,6 @@ $bar-width: 12px;
   height: $height;
   width: $height;
   right: 10px;
-  background-color: red;
   .spin-link {
     cursor: pointer;
     @include util-link;
