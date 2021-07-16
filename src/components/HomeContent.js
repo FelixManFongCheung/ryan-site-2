@@ -82,10 +82,10 @@ function HomeContent() {
                   target.style.opacity = 0;
                   descriptionArray[index].classList.add("nothing");
                   setSlide(slide + 1);
-                  index < artArray.length - 1 &&
+                  if (index < artArray.length - 1) {
                     artArray[index + 1].classList.remove("nothing");
-                  index < artArray.length - 1 &&
                     descriptionArray[index + 1].classList.remove("nothing");
+                  }
                   document.removeEventListener("mouseup", mouseUp);
                   document.removeEventListener("mousemove", mouseMove);
                   art.removeEventListener("mouseover", mouseOver);

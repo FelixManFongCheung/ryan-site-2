@@ -8,7 +8,7 @@ function Header({ changeMode, ImageContent }) {
       <Link href="/">
         {/* link style can only added to the class of the a tag  */}
         <a className="name-link">
-          <div className="name">Ryan Moyii</div>
+          <div className="name">Ryanmoyii</div>
         </a>
       </Link>
       <SpinNav changeMode={changeMode} />

@@ -22,8 +22,13 @@
 $num-of-letter: 36;
 $height: 80px;
 $width: 80px;
+$bar-width: 12px;
 
 .spin-nav {
+  position: relative;
+  height: $height;
+  width: $height;
+  right: 10px;
   .spin-link {
     cursor: pointer;
     @include util-link;
@@ -40,9 +45,9 @@ $width: 80px;
     font-size: 7px;
     height: $height / 2;
     position: absolute;
-    width: 12px;
-    top: 10px;
-    // transform: translate(-50%, -20%);
+    width: $bar-width;
+    top: 0;
+    left: $height/2 - $bar-width/2;
     transform-origin: bottom center;
   }
   @for $i from 1 through $num-of-letter {
