@@ -21,6 +21,9 @@ function Grids() {
 
   const _onDragOver = (e) => {
     e.preventDefault();
+    console.log(e.target.getBoundingClientRect());
+    console.log(e.clientX);
+    console.log(e.clientY);
   };
 
   const _onDrop = (e) => {
@@ -32,6 +35,15 @@ function Grids() {
       targetEl.style.backgroundImage = tempStore;
     }
   };
+
+  // const _onMouseOver = (e) => {
+  //   e.preventDefault();
+  //   console.log(e.target);
+  //   let dimension = e.target.getBoundingClientRect();
+  //   console.log(dimension);
+  //   console.log(e.clientX);
+  //   console.log(e.clientY);
+  // };
 
   return (
     <div className="grid-container">
