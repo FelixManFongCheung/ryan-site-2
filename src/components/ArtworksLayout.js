@@ -1,33 +1,23 @@
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { data } from "../data/allPaintings";
-import Works from "./Works";
-import About from "./About";
-import Work from "./Works";
+import Image from "next/image";
+import IndividualArtworks from "./IndividualArtWorks";
 
 function ArtworksLayout() {
   return (
     <div>
       <ul className="artworks">
-        {data.map((data, index) => {
+        {data.map((datum) => {
           return (
             <li
-              key={data.id}
+              key={datum.id}
               style={{
-                margin: "10px",
+                margin: "30px",
                 display: "inline-block",
-                // flex: "1",
+                cursor: "pointer",
               }}
             >
-              <Image
-                className="artworks-image"
-                src={data.url}
-                alt="title"
-                width={300}
-                height={300}
-                priority={true}
-                // layout="fill"
-              />
+              <IndividualArtworks description={datum.name} image={datum.url} />
             </li>
           );
         })}

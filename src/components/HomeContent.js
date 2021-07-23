@@ -4,12 +4,12 @@ import { data } from "../data/allPaintings";
 
 function HomeContent() {
   const [slide, setSlide] = useState(0);
-  let newData = data.slice(0, 5);
+  let newData = data.slice(0, 10);
 
   useEffect(() => {
-    let artContainer = document.querySelector(".container-art");
+    let artContainer = document.querySelector(".home-container-art");
     let containerWidth = artContainer.getBoundingClientRect().width;
-    let arts = document.querySelectorAll('[class^="art"]');
+    let arts = document.querySelectorAll(".home-art");
     let descriptions = document.querySelectorAll(".description");
     let descriptionArray = Array.from(descriptions);
     let artArray = Array.from(arts);
@@ -21,14 +21,12 @@ function HomeContent() {
     slide < artArray.length &&
       artArray.map((art, index) => {
         if (index !== slide) {
-          console.log("cleaned");
           art.classList.add("nothing");
         }
         let artWidth = art.getBoundingClientRect().width;
         let upperDistance = containerWidth - artWidth;
-        let parentNodeImage = art.querySelector(".image").parentElement;
+        let parentNodeImage = art.querySelector(".home-image").parentElement;
         parentNodeImage.style.pointerEvents = "none";
-        console.log(art);
 
         let pos1 = 0,
           pos2 = 0,
@@ -131,14 +129,14 @@ function HomeContent() {
   }, [slide]);
 
   return (
-    <div className="container-art">
+    <div className="home-container-art">
       {newData.map((data, index) => {
         return (
           <div key={data.id}>
-            <div className="art">
+            <div className="home-art">
               <Image
                 src={data.url}
-                className="image"
+                className="home-image"
                 alt="title"
                 height={500}
                 width={500}

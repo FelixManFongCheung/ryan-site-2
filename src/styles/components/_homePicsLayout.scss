@@ -1,4 +1,4 @@
-.container-art {
+.home-container-art {
   position: relative;
   width: 1000px;
   height: 500px;
@@ -7,7 +7,7 @@
   // background-color: rgb(194, 194, 194);
   // border-style: solid;
   // border-width: 3px;
-  .art {
+  .home-art {
     position: absolute;
     // margin: 0 auto;
     height: 100%;
@@ -16,9 +16,6 @@
     opacity: 0.5;
     z-index: 1;
   }
-  // .image {
-  //   pointer-events: none;
-  // }
 
   .nothing {
     pointer-events: none;
