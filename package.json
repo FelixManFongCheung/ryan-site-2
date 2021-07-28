@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.2",
+    "fs": "*",
     "next": "11.0.0",
+    "path": "^0.12.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-flip-move": "^3.0.4",

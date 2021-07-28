@@ -1,0 +1,15 @@
+#!/bin/sh
+ 
+DIR=/Users/apple/Documents/ryan-site-2/public/paintings;
+
+echo [ 
+let I=0
+find "$DIR" -name '*.jpg' | while read F; do
+    let I++;
+    N="$(basename "$F")";
+    N="${N/%.jpg/}";
+    [ $I != 1 ] && echo ,
+    echo ' { id: '${I}', name: "'"$N"'", url:"'"${F/$DIR/}"'" }' 
+done
+[ $I == 0 ] || echo;
+echo ]
