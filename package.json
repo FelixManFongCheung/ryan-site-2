@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.12.2",
-    "fs": "*",
+    "fuse.js": "^6.4.6",
     "next": "11.0.0",
     "path": "^0.12.7",
     "react": "17.0.2",
